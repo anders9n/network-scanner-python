@@ -1,5 +1,5 @@
 """
-Script que imprime los 10 puertos más comunes en ciberseguridad
+Script que imprime los 1024 puertos más comunes en ciberseguridad
 Usando conceptos de la Semana 2 de CS50P: Listas, Bucles for y Funciones
 """
 
@@ -25,7 +25,7 @@ def mostrar_puertos(lista_puertos):
     print("Quieres ver que puertos estan abiertos? ")
     print("-" * 50)
     
-    # Usamos un bucle for para iterar sobre cada elemento de la lista
+    # Usamos un bucle for para iterar sobre cada elemento de el rango
     # El bucle for toma cada elemento de la lista 'lista_puertos' uno por uno
     # y lo asigna a la variable 'puerto' en cada iteración
     for puerto in lista_puertos:
@@ -52,7 +52,7 @@ def puerto_abierto(host, puerto, timeout=0.5):
 
 def mostrar_estado_puertos(host, lista_puertos):
     """
-    Recorre una lista de puertos e imprime si están abiertos o cerrados en un host.
+    Recorre una lista de rangos de puertos e imprime si están abiertos o cerrados en un host.
     Usa colorama para colorear: verde para abiertos, rojo para cerrados.
     """
     print(f"\nProbando puertos en {host} (TCP):")
@@ -85,8 +85,7 @@ def main():
     if COLORAMA_DISPONIBLE:
         colorama.init(autoreset=True)
     
-    # Definimos una lista con los puertos más comunes en ciberseguridad
-    # Una lista es una colección ordenada de elementos en Python
+    # Definimos un rango con los puertos más comunes en ciberseguridad
     puertos = range(1, 1025)
     
     # Llamamos a la función mostrar_puertos pasándole la lista como argumento
